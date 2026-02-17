@@ -49,6 +49,7 @@ Check authentication with `gh auth status`. If not authenticated, ask the user t
 | `ISSUE-persist-github-cli-credentials.md` | Persist GitHub CLI credentials across rebuilds ([#59](https://github.com/terchris/devcontainer-toolbox/issues/59)) |
 | `ISSUE-update-upgrade-mechanism.md`       | Script-level updates without container rebuilds |
 | `ISSUE-vscode-devcontainers-extension.md` | VS Code Dev Containers extension bootstrap     |
+| `ISSUE-cmd-publish-github.md`             | New command: sync repo to GitHub mirror         |
 
 ## Where to submit
 
