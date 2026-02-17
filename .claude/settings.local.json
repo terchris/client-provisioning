@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc:*)",
+      "Bash(bash:*)",
+      "Bash(shellcheck:*)",
+      "Bash(./tests/run-tests.sh:*)",
+      "WebSearch",
+      "WebFetch(domain:docs.rancherdesktop.io)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:sirchia.cloud)",
+      "WebFetch(domain:deepwiki.com)",
+      "WebFetch(domain:www.suse.com)",
+      "mcp__ide__getDiagnostics",
+      "Bash(git -C /workspace mv scripts/rancher-desktop-install scripts/rancher-desktop)",
+      "Bash(git -C /workspace status scripts/rancher-desktop-install/)",
+      "WebFetch(domain:community.jamf.com)",
+      "WebFetch(domain:learn.jamf.com)",
+      "Bash(find:*)",
+      "Bash(dev-check:*)",
+      "Bash(dev-help:*)",
+      "Bash(dev-env:*)",
+      "Bash(git mv:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:euc365.com)",
+      "WebFetch(domain:www.anoopcnair.com)",
+      "WebFetch(domain:petervanderwoude.nl)",
+      "WebFetch(domain:discourse.psappdeploytoolkit.com)",
+      "WebFetch(domain:wolkenman.wordpress.com)",
+      "WebFetch(domain:patchmypc.com)",
+      "WebFetch(domain:andrewstaylor.com)",
+      "WebFetch(domain:mikemdm.de)",
+      "WebFetch(domain:dct.sovereignsky.no)"
+    ]
+  }
+}

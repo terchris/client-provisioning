@@ -1,0 +1,8 @@
+# Secrets folder - contains credentials (NEVER commit)
+.devcontainer.secrets/
+
+# macOS
+.DS_Store
+
+# terchris temp folder
+terchris/

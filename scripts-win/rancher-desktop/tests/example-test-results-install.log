@@ -1,0 +1,141 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260212141057
+Username: AzureAD\terchris
+RunAs User: AzureAD\terchris
+Configuration Name: 
+Machine: XYZ-PW0MKCB1 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File D:\rancher-desktop\tests\run-tests-install.ps1
+Process ID: 8544
+PSVersion: 5.1.26100.3624
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.3624
+BuildVersion: 10.0.26100.3624
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\rancher-desktop\tests\logs\test-results-install.log
+[14:10:57] INFO  Starting Rancher Desktop Test Helpers
+[14:10:57] INFO  Log file: D:\rancher-desktop\tests\logs\test-results-install.log
+
+================================================================
+[14:10:57] INFO  Test 1: Administrator check
+================================================================
+
+  PASS  Running as Administrator
+
+================================================================
+[14:10:57] INFO  Test 2: Install (runs install.ps1 with full verification)
+================================================================
+
+[14:10:57] INFO  Running install.ps1 (downloads ~500 MB, installs, launches, verifies Docker)...
+
+[14:10:57] INFO  Starting Rancher Desktop Installer v0.1.0
+[14:10:58] INFO    Version: 1.22.0
+[14:10:58] INFO    Checking paths: C:\Users\terchris\AppData\Local\Programs\Rancher Desktop, C:\Program Files\Rancher Desktop
+[14:10:58] INFO  Checking prerequisites...
+[14:10:58] OK    WSL2 features: Microsoft-Windows-Subsystem-Linux=Enabled, VirtualMachinePlatform=Enabled
+[14:10:58] INFO  Checking WSL kernel (timeout: 10 seconds)...
+[14:10:59] OK    WSL kernel: WSL version: 2.6.3.0
+[14:10:59] OK    Internet access: github.com reachable
+[14:11:00] OK    Disk space: 386.3 GB free (minimum: 2 GB)
+
+[14:11:00] INFO  Downloading Rancher Desktop v1.22.0...
+[14:11:00] INFO  URL: https://github.com/rancher-sandbox/rancher-desktop/releases/download/v1.22.0/Rancher.Desktop.Setup.1.22.0.msi
+[14:11:00] INFO  Destination: C:\Users\TERJEC~1\AppData\Local\Temp\Rancher.Desktop.Setup.1.22.0.msi
+[14:11:00] INFO  Expected file size: 667.4 MB
+[14:11:10] INFO  Downloading... 14% (91.8 / 667.4 MB)
+[14:11:20] INFO  Downloading... 28% (184.3 / 667.4 MB)
+[14:11:30] INFO  Downloading... 41% (276.2 / 667.4 MB)
+[14:11:40] INFO  Downloading... 55% (366.3 / 667.4 MB)
+[14:11:50] INFO  Downloading... 68% (456.8 / 667.4 MB)
+[14:12:00] INFO  Downloading... 83% (551 / 667.4 MB)
+[14:12:10] INFO  Downloading... 96% (642.9 / 667.4 MB)
+[14:12:13] OK    Downloaded Rancher.Desktop.Setup.1.22.0.msi (667.4 MB in 73s)
+[14:12:13] INFO  Installing Rancher Desktop v1.22.0 (per-user, silent)...
+[14:12:13] INFO  msiexec /i "C:\Users\TERJEC~1\AppData\Local\Temp\Rancher.Desktop.Setup.1.22.0.msi" /qn /norestart MSIINSTALLPERUSER=1 WSLINSTALLED=1 /l*v "C:\Users\TERJEC~1\AppData\Local\Temp\RancherDesktop-install.log"
+[14:12:47] OK    MSI install completed (exit code 0)
+[14:12:47] OK    Verified: Rancher Desktop.exe exists at C:\Users\terchris\AppData\Local\Programs\Rancher Desktop
+[14:12:47] INFO  Removing leftover settings: C:\Users\terchris\AppData\Local\rancher-desktop\settings.json
+[14:12:47] INFO  Deploying defaults profile to registry...
+[14:12:47] INFO    Container engine: moby
+[14:12:47] INFO    Kubernetes: False
+[14:12:47] OK    Deployment profile written to HKLM:\SOFTWARE\Policies\Rancher Desktop\defaults
+[14:12:47] INFO  Cleaning up downloaded MSI...
+
+[14:12:47] INFO  Launching Rancher Desktop for verification...
+[14:12:49] INFO  Found rdctl at C:\Users\terchris\AppData\Local\Programs\Rancher Desktop\resources\resources\win32\bin\rdctl.exe
+[14:12:49] INFO  Waiting for backend to reach ready state (timeout: 120 seconds)...
+[14:12:52] OK    Rancher Desktop process is running (PID: 3012)
+[14:12:53] INFO  Backend state: STOPPED (3/120 sec)
+[14:12:56] INFO  Backend state: STOPPED (6/120 sec)
+[14:12:59] INFO  Backend state: STOPPED (9/120 sec)
+[14:13:02] INFO  Backend state: STOPPED (12/120 sec)
+[14:13:05] INFO  Backend state: STARTING (15/120 sec)
+[14:13:08] INFO  Backend state: STARTING (18/120 sec)
+[14:13:12] INFO  Backend state: STARTING (21/120 sec)
+[14:13:15] INFO  Backend state: STARTING (24/120 sec)
+[14:13:18] INFO  Backend state: STARTING (27/120 sec)
+[14:13:21] INFO  Backend state: STARTING (30/120 sec)
+[14:13:24] INFO  Backend state: STARTING (33/120 sec)
+[14:13:27] INFO  Backend state: STARTING (36/120 sec)
+[14:13:31] INFO  Backend state: STARTING (39/120 sec)
+[14:13:34] INFO  Backend state: STARTING (42/120 sec)
+[14:13:37] INFO  Backend state: STARTING (45/120 sec)
+[14:13:40] INFO  Backend state: DISABLED (48/120 sec)
+[14:13:40] OK    Backend is ready (state: DISABLED)
+[14:13:40] INFO  Testing Docker: C:\Users\terchris\AppData\Local\Programs\Rancher Desktop\resources\resources\win32\bin\docker.exe run --rm hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+[14:13:41] OK    Docker hello-world passed
+[14:13:41] INFO  Stopping Rancher Desktop...
+Shutting down.
+[14:13:50] INFO  Sent rdctl shutdown, waiting for process to exit...
+[14:13:52] OK    Rancher Desktop stopped
+[14:13:52] OK    Rancher Desktop Installer completed -- Rancher Desktop v1.22.0 installed and verified
+
+  PASS  install.ps1 (exit code 0 -- installed, launched, Docker verified, stopped)
+
+================================================================
+[14:13:52] INFO  Test 3: Detect (runs detect.ps1)
+================================================================
+
+  PASS  detect.ps1 exit code 0
+  PASS  detect.ps1 produced output: Rancher Desktop installed at C:\Users\terchris\AppData\Local\Programs\Rancher Desktop
+
+================================================================
+Results: 4 total, 4 passed, 0 failed, 0 skipped
+================================================================
+
+================================================================
+[14:13:52] OK    ALL INSTALL TESTS PASSED
+
+[14:13:52] INFO  Rancher Desktop is installed and verified.
+[14:13:52] INFO  To test uninstall: run-tests-uninstall.ps1
+================================================================
+**********************
+Windows PowerShell transcript end
+End time: 20260212141352
+**********************

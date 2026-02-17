@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+# .githooks/pre-commit
+#
+# Auto-bumps SCRIPT_VER patch version for changed .sh and .ps1 script files.
+# Only bumps files that:
+#   - Are staged for commit (.sh or .ps1)
+#   - Contain a SCRIPT_VER field
+#   - Already exist in HEAD (new files are skipped)
+#   - Have real content changes (not just a SCRIPT_VER line change)
+#
+# Minor and major version bumps are done manually with set-version-*.sh tools.
+
+set -euo pipefail
+
+bumped=0
+
+for file in $(git diff --cached --name-only); do
+    # Only process .sh and .ps1 files
+    case "$file" in
+        *.sh|*.ps1) ;;
+        *) continue ;;
+    esac
+
+    # File must exist on disk (not a delete)
+    [ -f "$file" ] || continue
+
+    # File must contain SCRIPT_VER
+    grep -q 'SCRIPT_VER' "$file" || continue
+
+    # Skip new files (not in HEAD)
+    git show "HEAD:$file" > /dev/null 2>&1 || continue
+
+    # Compare content excluding SCRIPT_VER line -- skip if no real change
+    staged_content=$(git show ":$file" | grep -v 'SCRIPT_VER' || true)
+    head_content=$(git show "HEAD:$file" | grep -v 'SCRIPT_VER' || true)
+    [ "$staged_content" = "$head_content" ] && continue
+
+    # Extract current version (|| true to handle grep returning no match under pipefail)
+    if [[ "$file" == *.ps1 ]]; then
+        current=$(grep '^\$SCRIPT_VER' "$file" | head -1 | sed 's/.*= *"//' | sed 's/".*//') || true
+    else
+        current=$(grep '^SCRIPT_VER=' "$file" | head -1 | sed 's/^SCRIPT_VER="//' | sed 's/".*//') || true
+    fi
+    [ -z "$current" ] && continue
+
+    # Parse and bump patch
+    major=$(echo "$current" | cut -d. -f1)
+    minor=$(echo "$current" | cut -d. -f2)
+    patch=$(echo "$current" | cut -d. -f3)
+    new_ver="${major}.${minor}.$((patch + 1))"
+
+    # Update file on disk
+    if [[ "$file" == *.ps1 ]]; then
+        sed -i "s/^\(\\\$SCRIPT_VER *=  *\)\"[^\"]*\"/\1\"$new_ver\"/" "$file"
+    else
+        sed -i "s/SCRIPT_VER=\"[^\"]*\"/SCRIPT_VER=\"$new_ver\"/" "$file"
+    fi
+
+    # Re-stage the file with the version bump
+    git add "$file"
+    echo "  version-bump: $(basename "$file") $current -> $new_ver"
+    bumped=$((bumped + 1))
+done
+
+if [ "$bumped" -gt 0 ]; then
+    echo "  version-bump: $bumped file(s) bumped"
+fi

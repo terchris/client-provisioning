@@ -1,0 +1,2 @@
+*.intunewin
+tests/logs/test-results-*.log

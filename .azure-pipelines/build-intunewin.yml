@@ -1,0 +1,47 @@
+# Template: Build a single .intunewin package
+#
+# Called once per package from azure-pipelines.yml.
+# Installs required PowerShell modules, builds the package,
+# runs the build test if one exists, and publishes the artifact.
+
+parameters:
+  - name: packageName
+    type: string
+  - name: packageDir
+    type: string
+
+jobs:
+- job: Build_${{ replace(parameters.packageName, '-', '_') }}
+  displayName: 'Build ${{ parameters.packageName }}'
+  steps:
+  - checkout: self
+
+  - pwsh: |
+      Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser
+      Install-Module -Name SvRooij.ContentPrep.Cmdlet -Force -Scope CurrentUser
+    displayName: 'Install PowerShell modules'
+
+  - pwsh: |
+      & "${{ parameters.packageDir }}/build.ps1"
+    displayName: 'Build ${{ parameters.packageName }}'
+
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '${{ parameters.packageDir }}'
+      contents: '*.intunewin'
+      targetFolder: '$(Build.ArtifactStagingDirectory)/${{ parameters.packageName }}'
+    displayName: 'Stage .intunewin'
+
+  - pwsh: |
+      $testScript = "${{ parameters.packageDir }}/tests/run-tests-build.ps1"
+      if (Test-Path $testScript) {
+        Write-Host "Running build test: $testScript"
+        & $testScript
+      } else {
+        Write-Host "No build test found at $testScript -- skipping"
+      }
+    displayName: 'Test ${{ parameters.packageName }} (if available)'
+
+  - publish: '$(Build.ArtifactStagingDirectory)/${{ parameters.packageName }}'
+    artifact: '${{ parameters.packageName }}'
+    displayName: 'Publish ${{ parameters.packageName }}'

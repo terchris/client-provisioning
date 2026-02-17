@@ -1,0 +1,57 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260212141021
+Username: AzureAD\terchris
+RunAs User: AzureAD\terchris
+Configuration Name: 
+Machine: XYZ-PW0MKCB1 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File D:\rancher-desktop\tests\run-tests-uninstall.ps1
+Process ID: 14888
+PSVersion: 5.1.26100.3624
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.3624
+BuildVersion: 10.0.26100.3624
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\rancher-desktop\tests\logs\test-results-uninstall.log
+[14:10:22] INFO  Starting Rancher Desktop Test Helpers
+[14:10:22] INFO  Log file: D:\rancher-desktop\tests\logs\test-results-uninstall.log
+
+================================================================
+[14:10:22] INFO  Test 1: Uninstall (runs uninstall.ps1 with full verification)
+================================================================
+
+[14:10:22] INFO  Running uninstall.ps1 (stops processes, uninstalls, verifies removal)...
+
+[14:10:22] INFO  Starting Rancher Desktop Uninstaller v0.1.0
+[14:10:22] INFO  Found Rancher Desktop at C:\Users\terchris\AppData\Local\Programs\Rancher Desktop
+[14:10:22] INFO  Found in registry: HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*
+[14:10:22] INFO  Found product code: {97218EA8-7B57-41EB-A47B-C369CA4C998D}
+[14:10:22] INFO  No Rancher Desktop processes running
+[14:10:22] INFO  Uninstalling Rancher Desktop (product code: {97218EA8-7B57-41EB-A47B-C369CA4C998D})...
+[14:10:22] INFO  msiexec /x "{97218EA8-7B57-41EB-A47B-C369CA4C998D}" /qn /norestart
+[14:10:28] OK    MSI uninstall completed (exit code 0)
+[14:10:28] OK    Verified: Rancher Desktop.exe no longer exists
+[14:10:28] OK    Removed deployment profile from registry
+[14:10:29] OK    Verified: Rancher Desktop registry entry removed
+[14:10:29] OK    Rancher Desktop Uninstaller completed -- Rancher Desktop removed
+
+  PASS  uninstall.ps1 (exit code 0 -- uninstalled, exe removed, registry cleaned)
+
+================================================================
+Results: 1 total, 1 passed, 0 failed, 0 skipped
+================================================================
+
+================================================================
+[14:10:29] OK    ALL UNINSTALL TESTS PASSED
+
+[14:10:29] INFO  Rancher Desktop has been removed.
+[14:10:29] INFO  To reinstall: run-tests-install.ps1
+================================================================
+**********************
+Windows PowerShell transcript end
+End time: 20260212141029
+**********************

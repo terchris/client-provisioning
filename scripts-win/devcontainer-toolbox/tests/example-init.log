@@ -1,0 +1,76 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20260212185551
+Username: AzureAD\terchris
+RunAs User: AzureAD\terchris
+Configuration Name:
+Machine: XYZ-PW0MKCB1 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File D:\devcontainer-toolbox\tests\run-tests-init.ps1
+Process ID: 17264
+PSVersion: 5.1.26100.3624
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.3624
+BuildVersion: 10.0.26100.3624
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\devcontainer-toolbox\tests\logs\test-results-init.log
+[18:55:51] INFO  Starting Devcontainer Toolbox Test Helpers
+[18:55:51] INFO  Log file: D:\devcontainer-toolbox\tests\logs\test-results-init.log
+
+================================================================
+[18:55:51] INFO  Test 1: Create temp folder
+================================================================
+
+  PASS  Created temp folder: C:\Users\TERJEC~1\AppData\Local\Temp\devcontainer-init-test-0d12cbe4
+
+================================================================
+[18:55:51] INFO  Test 2: Run devcontainer-init.ps1 on temp folder
+================================================================
+
+[18:55:51] INFO  Running devcontainer-init.ps1 with folder: C:\Users\TERJEC~1\AppData\Local\Temp\devcontainer-init-test-0d12cbe4
+
+[18:55:51] INFO  Starting: Devcontainer Initialization Ver: 0.1.0
+[18:55:51] INFO  Using target directory: C:\Users\terchris\AppData\Local\Temp\devcontainer-init-test-0d12cbe4
+[18:55:52] INFO  Downloading devcontainer.json...
+[18:55:52] INFO    URL: https://raw.githubusercontent.com/terchris/devcontainer-toolbox/main/.devcontainer/devcontainer.json
+[18:55:52] OK    Created .devcontainer/devcontainer.json (3179 bytes)
+[18:55:52] OK    devcontainer configuration created!
+[18:55:52] INFO  Next steps:
+[18:55:52] INFO    1. Open this folder in VS Code
+[18:55:52] INFO    2. Click 'Reopen in Container' when prompted
+[18:55:52] INFO       (or run: Ctrl+Shift+P > 'Dev Containers: Reopen in Container')
+[18:55:52] INFO    3. Inside the container, run: dev-help
+
+  PASS  devcontainer-init.ps1 (exit code 0)
+
+================================================================
+[18:55:52] INFO  Test 3: Verify .devcontainer/devcontainer.json exists
+================================================================
+
+  PASS  .devcontainer/devcontainer.json exists at C:\Users\TERJEC~1\AppData\Local\Temp\devcontainer-init-test-0d12cbe4\.devcontainer\devcontainer.json
+
+================================================================
+[18:55:52] INFO  Test 4: Verify file is not empty and contains expected content
+================================================================
+
+  PASS  devcontainer.json is not empty (3179 bytes)
+  PASS  devcontainer.json contains expected content
+[18:55:52] INFO  Cleaning up temp folder: C:\Users\TERJEC~1\AppData\Local\Temp\devcontainer-init-test-0d12cbe4
+
+================================================================
+Results: 5 total, 5 passed, 0 failed, 0 skipped
+================================================================
+
+================================================================
+[18:55:52] OK    ALL INIT TESTS PASSED
+
+[18:55:52] INFO  devcontainer-init works correctly.
+[18:55:52] INFO  Next: run-tests-uninstall.ps1 to test removal
+================================================================
+**********************
+Windows PowerShell transcript end
+End time: 20260212185552
+**********************

@@ -1,0 +1,67 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20260212185412
+Username: AzureAD\terchris
+RunAs User: AzureAD\terchris
+Configuration Name:
+Machine: XYZ-PW0MKCB1 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File D:\devcontainer-toolbox\tests\run-tests-uninstall.ps1
+Process ID: 9968
+PSVersion: 5.1.26100.3624
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.3624
+BuildVersion: 10.0.26100.3624
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\devcontainer-toolbox\tests\logs\test-results-uninstall.log
+[18:54:12] INFO  Starting Devcontainer Toolbox Test Helpers
+[18:54:12] INFO  Log file: D:\devcontainer-toolbox\tests\logs\test-results-uninstall.log
+
+================================================================
+[18:54:12] INFO  Test 1: Uninstall (runs uninstall.ps1)
+================================================================
+
+[18:54:12] INFO  Running uninstall.ps1 (removes files, cleans PATH)...
+
+[18:54:12] INFO  Starting: Devcontainer Toolbox Uninstaller Ver: 0.1.0
+[18:54:13] INFO  Removing install directory: C:\Program Files\devcontainer-toolbox
+[18:54:13] OK    Removed C:\Program Files\devcontainer-toolbox
+[18:54:13] INFO  Removing C:\Program Files\devcontainer-toolbox from system PATH...
+[18:54:13] OK    Removed C:\Program Files\devcontainer-toolbox from system PATH
+[18:54:13] INFO  Docker is not running -- skipping image removal
+[18:54:13] INFO  To remove the image manually, start Rancher Desktop and run:
+[18:54:13] INFO    docker rmi ghcr.io/terchris/devcontainer-toolbox:latest
+
+[18:54:13] OK    Devcontainer Toolbox Uninstaller completed -- devcontainer-toolbox removed
+
+  PASS  uninstall.ps1 (exit code 0)
+
+================================================================
+[18:54:13] INFO  Test 2: Verify devcontainer-init.ps1 no longer exists
+================================================================
+
+  PASS  devcontainer-init.ps1 no longer exists at C:\Program Files\devcontainer-toolbox
+
+================================================================
+[18:54:13] INFO  Test 3: Verify install directory removed from system PATH
+================================================================
+
+  PASS  C:\Program Files\devcontainer-toolbox removed from system PATH
+
+================================================================
+Results: 3 total, 3 passed, 0 failed, 0 skipped
+================================================================
+
+================================================================
+[18:54:13] OK    ALL UNINSTALL TESTS PASSED
+
+[18:54:13] INFO  devcontainer-toolbox has been removed.
+[18:54:13] INFO  To reinstall: run-tests-install.ps1
+================================================================
+**********************
+Windows PowerShell transcript end
+End time: 20260212185413
+**********************

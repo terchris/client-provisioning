@@ -1,0 +1,115 @@
+**********************
+Windows PowerShell transcript start
+Start time: 20260212185455
+Username: AzureAD\terchris
+RunAs User: AzureAD\terchris
+Configuration Name:
+Machine: XYZ-PW0MKCB1 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy Bypass -File D:\devcontainer-toolbox\tests\run-tests-install.ps1
+Process ID: 11004
+PSVersion: 5.1.26100.3624
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.3624
+BuildVersion: 10.0.26100.3624
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is D:\devcontainer-toolbox\tests\logs\test-results-install.log
+[18:54:55] INFO  Starting Devcontainer Toolbox Test Helpers
+[18:54:55] INFO  Log file: D:\devcontainer-toolbox\tests\logs\test-results-install.log
+
+================================================================
+[18:54:55] INFO  Test 1: Administrator check
+================================================================
+
+  PASS  Running as Administrator
+
+================================================================
+[18:54:55] INFO  Test 2: Rancher Desktop installed
+================================================================
+
+  PASS  Rancher Desktop found at C:\Users\terchris\AppData\Local\Programs\Rancher Desktop
+
+================================================================
+[18:54:55] INFO  Test 3: Install (runs install.ps1)
+================================================================
+
+[18:54:55] INFO  Running install.ps1 (pulls image, installs init tool, adds to PATH)...
+
+[18:54:55] INFO  Starting: Devcontainer Toolbox Installer Ver: 0.1.0
+[18:54:55] OK    Rancher Desktop found at C:\Users\terchris\AppData\Local\Programs\Rancher Desktop
+[18:54:55] INFO  Launching Rancher Desktop...
+[18:54:55] INFO  Waiting for backend to reach ready state (timeout: 120 seconds)...
+[18:54:58] OK    Rancher Desktop process is running (PID: 7960)
+[18:54:58] INFO  Backend state: STOPPED (3/120 sec)
+[18:55:02] INFO  Backend state: STOPPED (6/120 sec)
+[18:55:05] INFO  Backend state: STARTING (9/120 sec)
+[18:55:08] INFO  Backend state: STARTING (12/120 sec)
+[18:55:11] INFO  Backend state: STARTING (15/120 sec)
+[18:55:14] INFO  Backend state: STARTING (18/120 sec)
+[18:55:17] INFO  Backend state: STARTING (21/120 sec)
+[18:55:20] INFO  Backend state: STARTING (24/120 sec)
+[18:55:23] INFO  Backend state: STARTING (27/120 sec)
+[18:55:26] INFO  Backend state: STARTING (30/120 sec)
+[18:55:29] INFO  Backend state: DISABLED (33/120 sec)
+[18:55:29] OK    Backend is ready (state: DISABLED)
+[18:55:29] INFO  Pulling Docker image: ghcr.io/terchris/devcontainer-toolbox:latest
+latest: Pulling from terchris/devcontainer-toolbox
+Digest: sha256:0e11d585c0b284435653dd3cd00c04e9f7387a7260753789d8e54b27a6382618
+Status: Image is up to date for ghcr.io/terchris/devcontainer-toolbox:latest
+ghcr.io/terchris/devcontainer-toolbox:latest
+[18:55:31] OK    Docker image pulled: ghcr.io/terchris/devcontainer-toolbox:latest
+[18:55:31] INFO  Installing devcontainer-init to C:\Program Files\devcontainer-toolbox...
+[18:55:31] OK    Installed devcontainer-init.ps1 and devcontainer-init.cmd to C:\Program Files\devcontainer-toolbox
+[18:55:31] INFO  Adding C:\Program Files\devcontainer-toolbox to system PATH...
+[18:55:31] OK    Added C:\Program Files\devcontainer-toolbox to system PATH
+[18:55:31] INFO  Note: PATH changes take effect in new terminal sessions
+[18:55:31] INFO  Stopping Rancher Desktop...
+Shutting down.
+[18:55:40] INFO  Sent rdctl shutdown, waiting for process to exit...
+[18:55:42] OK    Rancher Desktop stopped
+
+[18:55:42] OK    Devcontainer Toolbox Installer completed
+[18:55:42] OK      Image: ghcr.io/terchris/devcontainer-toolbox:latest
+[18:55:42] OK      Tool:  C:\Program Files\devcontainer-toolbox\devcontainer-init.cmd
+[18:55:42] INFO  Users can now run 'devcontainer-init' from any new terminal
+
+  PASS  install.ps1 (exit code 0)
+
+================================================================
+[18:55:42] INFO  Test 4: Verify devcontainer-init.ps1 at install location
+================================================================
+
+  PASS  devcontainer-init.ps1 exists at C:\Program Files\devcontainer-toolbox
+
+================================================================
+[18:55:42] INFO  Test 5: Verify install directory is in system PATH
+================================================================
+
+  PASS  C:\Program Files\devcontainer-toolbox is in system PATH
+
+================================================================
+[18:55:42] INFO  Test 6: Detect (runs detect.ps1)
+================================================================
+
+[18:55:42] INFO  Starting: Devcontainer Toolbox Detection Ver: 0.1.0
+  PASS  detect.ps1 exit code 0
+  PASS  detect.ps1 produced output: devcontainer-toolbox installed at C:\Program Files\devcontainer-toolbox
+
+================================================================
+Results: 7 total, 7 passed, 0 failed, 0 skipped
+================================================================
+
+================================================================
+[18:55:42] OK    ALL INSTALL TESTS PASSED
+
+[18:55:42] INFO  devcontainer-toolbox is installed.
+[18:55:42] INFO  Next: run-tests-init.ps1 to test devcontainer-init
+[18:55:42] INFO  Then: run-tests-uninstall.ps1 to test removal
+================================================================
+**********************
+Windows PowerShell transcript end
+End time: 20260212185542
+**********************

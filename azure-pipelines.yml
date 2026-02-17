@@ -1,0 +1,60 @@
+# CI/CD pipeline for .intunewin package builds
+#
+# Triggers on pushes to main that change scripts-win/.
+# Validates all PowerShell scripts, then builds each package in parallel.
+# Built .intunewin files are published as downloadable pipeline artifacts.
+#
+# To add a new package, add an entry to the packages parameter below.
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+  paths:
+    include:
+      - scripts-win/*
+    exclude:
+      - scripts-win/**/tests/*
+      - scripts-win/**/*.md
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+parameters:
+  - name: packages
+    type: object
+    default:
+      - name: rancher-desktop
+        dir: scripts-win/rancher-desktop
+      - name: wsl2
+        dir: scripts-win/wsl2
+      - name: devcontainer-toolbox
+        dir: scripts-win/devcontainer-toolbox
+
+stages:
+- stage: Validate
+  displayName: 'Validate PowerShell scripts'
+  jobs:
+  - job: Validate
+    displayName: 'Run validate-powershell.sh'
+    steps:
+    - checkout: self
+
+    - pwsh: |
+        Install-Module -Name PSScriptAnalyzer -Force -Scope CurrentUser
+      displayName: 'Install PSScriptAnalyzer'
+
+    - bash: |
+        bash docs/ai-developer/tools/validate-powershell.sh
+      displayName: 'Validate all PowerShell scripts'
+
+- stage: Build
+  displayName: 'Build .intunewin packages'
+  dependsOn: Validate
+  jobs:
+    - ${{ each pkg in parameters.packages }}:
+      - template: .azure-pipelines/build-intunewin.yml
+        parameters:
+          packageName: ${{ pkg.name }}
+          packageDir: ${{ pkg.dir }}
