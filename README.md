@@ -65,6 +65,12 @@ Windows `.intunewin` packages are built automatically by Azure Pipelines when ch
 
 Scripts can be copied to a USB stick for manual testing on Windows PCs. See [docs/MANUAL-TEST-WINDOWS-REINSTALL.md](docs/MANUAL-TEST-WINDOWS-REINSTALL.md) for the full end-to-end test procedure.
 
+## Help wanted: Silent WSL2 install via Intune
+
+The biggest unsolved problem in this repo is automating the WSL2 install on Windows via Intune. WSL2 requires enabling Windows features and a reboot, which is tricky to do silently in an MDM pipeline. The current `scripts-win/wsl2/install.ps1` works manually, but a fully unattended Intune deployment remains an open challenge.
+
+If you have experience with Intune and WSL2 deployment, we'd love your help. See [docs/wsl-install-challenge.md](docs/wsl-install-challenge.md) for the full problem description.
+
 ## Getting started
 
 See [docs/QUICK-START.md](docs/QUICK-START.md) for the step-by-step setup guide (clone, open in VS Code, devcontainer starts automatically).
