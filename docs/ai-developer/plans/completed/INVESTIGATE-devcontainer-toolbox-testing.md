@@ -88,7 +88,7 @@ The `scripts-mac/devcontainer-toolbox/` package has 3 scripts but **no tests**. 
 
 1. Checks Docker is installed (`command -v docker`)
 2. Checks Docker daemon is running (`docker ps`)
-3. Runs `docker pull terchris/devcontainer-toolbox:latest`
+3. Runs `docker pull helpers-no/devcontainer-toolbox:latest`
 
 **Testable scenarios:**
 

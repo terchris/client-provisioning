@@ -1,6 +1,6 @@
 # Devcontainer Toolbox Issues
 
-This folder contains issue and feature request drafts for the [devcontainer-toolbox](https://github.com/terchris/devcontainer-toolbox) project.
+This folder contains issue and feature request drafts for the [devcontainer-toolbox](https://github.com/helpers-no/devcontainer-toolbox) project.
 
 The devcontainer-toolbox is open source and contributions are welcome -- bug reports, feature requests, and pull requests.
 
@@ -26,14 +26,14 @@ The markdown files here are **examples** of how to write clear, actionable issue
 **AI assistants (Claude Code) should submit issues directly** when `gh` is authenticated. Write the issue file first, then submit it:
 
 ```bash
-gh issue create --repo terchris/devcontainer-toolbox \
+gh issue create --repo helpers-no/devcontainer-toolbox \
   --title "Short description of the issue" \
   --body-file docs/ai-developer/devcontainer-toolbox-issues/ISSUE-my-issue.md
 ```
 
 Check authentication with `gh auth status`. If not authenticated, ask the user to run `gh auth login` first.
 
-**Manually:** Open [github.com/terchris/devcontainer-toolbox/issues](https://github.com/terchris/devcontainer-toolbox/issues) and paste the markdown content.
+**Manually:** Open [github.com/helpers-no/devcontainer-toolbox/issues](https://github.com/helpers-no/devcontainer-toolbox/issues) and paste the markdown content.
 
 ## Current issues
 
@@ -41,16 +41,16 @@ Check authentication with `gh auth status`. If not authenticated, ask the user t
 |--------------------------------------------|------------------------------------------------|
 | `ISSUE-azure-devops-cli.md`               | Request for Azure DevOps CLI tool              |
 | `ISSUE-azure-devops-pat-env.md`           | PAT environment variable handling              |
-| `ISSUE-claude-credential-sync-migration-and-api-key.md` | Credential sync migration gap and API key auth ([#58](https://github.com/terchris/devcontainer-toolbox/issues/58)) |
+| `ISSUE-claude-credential-sync-migration-and-api-key.md` | Credential sync migration gap and API key auth ([#58](https://github.com/helpers-no/devcontainer-toolbox/issues/58)) |
 | `ISSUE-config-azure-devops.md`            | Azure DevOps configuration script              |
 | `ISSUE-lightweight-powershell.md`         | Lightweight PowerShell support                 |
 | `ISSUE-machine-readable-tool-inventory.md` | Machine-readable tool inventory (completed)    |
 | `ISSUE-persist-claude-credentials.md`     | Persist Claude AI credentials across rebuilds  |
-| `ISSUE-persist-github-cli-credentials.md` | Persist GitHub CLI credentials across rebuilds ([#59](https://github.com/terchris/devcontainer-toolbox/issues/59)) |
+| `ISSUE-persist-github-cli-credentials.md` | Persist GitHub CLI credentials across rebuilds ([#59](https://github.com/helpers-no/devcontainer-toolbox/issues/59)) |
 | `ISSUE-update-upgrade-mechanism.md`       | Script-level updates without container rebuilds |
 | `ISSUE-vscode-devcontainers-extension.md` | VS Code Dev Containers extension bootstrap     |
 | `ISSUE-cmd-publish-github.md`             | New command: sync repo to GitHub mirror         |
 
 ## Where to submit
 
-Open issues and pull requests at: **<https://github.com/terchris/devcontainer-toolbox>**
+Open issues and pull requests at: **<https://github.com/helpers-no/devcontainer-toolbox>**

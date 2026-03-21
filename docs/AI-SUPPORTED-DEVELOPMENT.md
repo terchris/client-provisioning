@@ -33,7 +33,7 @@ cp .devcontainer.secrets/claude-credentials.json ~/.claude/.credentials.json
 chmod 600 ~/.claude/.credentials.json
 ```
 
-This is a manual workaround until the devcontainer-toolbox adds automatic credential persistence. See [issue #46](https://github.com/terchris/devcontainer-toolbox/issues/46).
+This is a manual workaround until the devcontainer-toolbox adds automatic credential persistence. See [issue #46](https://github.com/helpers-no/devcontainer-toolbox/issues/46).
 
 ### Verify installation
 

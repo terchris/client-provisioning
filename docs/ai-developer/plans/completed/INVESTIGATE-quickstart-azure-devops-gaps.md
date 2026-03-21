@@ -23,9 +23,9 @@ The completed [INVESTIGATE-developer-onboarding.md](../completed/INVESTIGATE-dev
 
 Additionally, three devcontainer-toolbox issues have been resolved since that investigation:
 
-- [#42](https://github.com/terchris/devcontainer-toolbox/issues/42) — Azure DevOps CLI tool (closed)
-- [#43](https://github.com/terchris/devcontainer-toolbox/issues/43) — Machine-readable tool inventory (closed)
-- [#44](https://github.com/terchris/devcontainer-toolbox/issues/44) — `config-azure-devops.sh` addition (closed)
+- [#42](https://github.com/helpers-no/devcontainer-toolbox/issues/42) — Azure DevOps CLI tool (closed)
+- [#43](https://github.com/helpers-no/devcontainer-toolbox/issues/43) — Machine-readable tool inventory (closed)
+- [#44](https://github.com/helpers-no/devcontainer-toolbox/issues/44) — `config-azure-devops.sh` addition (closed)
 
 These resolved issues mean the toolbox now has capabilities that the docs don't reference yet.
 
@@ -67,7 +67,7 @@ Requires `tool-azure-devops` (Azure CLI + azure-devops extension) to be installe
 |--------|-------------------------|-------|
 | Git identity | Yes | Stored in `.devcontainer.secrets/env-vars/.git-identity` |
 | Azure DevOps PAT | **Partially** | `--show` reports "Not saved (won't survive container rebuild)" — needs `config-azure-devops.sh` to be run interactively to save to `.devcontainer.secrets/` |
-| Claude Code credentials | **No** | OAuth tokens in `~/.claude/.credentials.json` are lost on rebuild. [Issue #46](https://github.com/terchris/devcontainer-toolbox/issues/46) is open for this |
+| Claude Code credentials | **No** | OAuth tokens in `~/.claude/.credentials.json` are lost on rebuild. [Issue #46](https://github.com/helpers-no/devcontainer-toolbox/issues/46) is open for this |
 
 ### The onboarding flow that now works inside the devcontainer
 
@@ -108,7 +108,7 @@ This is exactly the **Option B** flow from the onboarding investigation — all 
 - ~~Does `.devcontainer.secrets/` automatically persist across rebuilds? How?~~ **Answered**: Yes, it's a workspace directory that survives rebuilds. Config scripts store credentials there and restore via `--verify`.
 - ~~Does the developer need to do anything after a rebuild, or is it seamless?~~ **Answered**: Seamless. The toolbox entrypoint (`/opt/devcontainer-toolbox/entrypoint.sh`) loops through all config scripts that support `--verify` and restores them automatically on every container start (lines 181-194). Git identity is also explicitly restored (line 67-68).
 - ~~`AZURE_DEVOPS_EXT_PAT` — is it auto-exported on container start, or must the user re-export it?~~ **Answered**: Auto-restored. The entrypoint runs `config-azure-devops.sh --verify` automatically, which re-exports `AZURE_DEVOPS_EXT_PAT` from `.devcontainer.secrets/`. The "Not saved" warning we observed was because the PAT was set via `project-installs.sh` (bypassing the config script), not via `config-azure-devops.sh` interactively.
-- Claude Code credentials ([#46](https://github.com/terchris/devcontainer-toolbox/issues/46)) — still open. `config-ai-claudecode.sh` exists but handles LiteLLM proxy tokens, not the OAuth login token stored in `~/.claude/.credentials.json`.
+- Claude Code credentials ([#46](https://github.com/helpers-no/devcontainer-toolbox/issues/46)) — still open. `config-ai-claudecode.sh` exists but handles LiteLLM proxy tokens, not the OAuth login token stored in `~/.claude/.credentials.json`.
 
 ### 5. Which docs need updating?
 

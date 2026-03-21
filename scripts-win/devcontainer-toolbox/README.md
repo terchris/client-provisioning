@@ -5,7 +5,7 @@ Pulls the devcontainer-toolbox Docker image and installs the `devcontainer-init`
 ## What it does
 
 - Launches Rancher Desktop and waits for the Docker backend to be ready
-- Pulls `ghcr.io/terchris/devcontainer-toolbox:latest` Docker image
+- Pulls `ghcr.io/helpers-no/devcontainer-toolbox:latest` Docker image
 - Installs `devcontainer-init.ps1` and `devcontainer-init.cmd` to `C:\Program Files\devcontainer-toolbox\`
 - Adds the install directory to the system PATH so users can type `devcontainer-init` from any terminal
 - Shuts down Rancher Desktop cleanly

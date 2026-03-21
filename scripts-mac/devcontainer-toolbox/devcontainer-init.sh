@@ -34,7 +34,7 @@ SCRIPT_CATEGORY="DEVOPS"
 #------------------------------------------------------------------------------
 
 # Repository and image configuration (from devcontainer-toolbox install.sh)
-REPO="terchris/devcontainer-toolbox"
+REPO="helpers-no/devcontainer-toolbox"
 DEVCONTAINER_JSON_URL="https://raw.githubusercontent.com/$REPO/main/devcontainer-user-template.json"
 
 #------------------------------------------------------------------------------

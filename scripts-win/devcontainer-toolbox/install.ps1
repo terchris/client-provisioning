@@ -38,7 +38,7 @@ $SCRIPT_CATEGORY    = "DEPLOY"
 # CONFIGURATION
 #------------------------------------------------------------------------------
 
-$CONTAINER_IMAGE       = "ghcr.io/terchris/devcontainer-toolbox:latest"
+$CONTAINER_IMAGE       = "ghcr.io/helpers-no/devcontainer-toolbox:latest"
 $INSTALL_DIR           = "C:\Program Files\devcontainer-toolbox"
 $INIT_SCRIPT_NAME      = "devcontainer-init.ps1"
 $INIT_CMD_NAME         = "devcontainer-init.cmd"

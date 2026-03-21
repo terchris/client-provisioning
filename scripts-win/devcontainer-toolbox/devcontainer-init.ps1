@@ -39,7 +39,7 @@ $SCRIPT_CATEGORY    = "DEVOPS"
 # CONFIGURATION
 #------------------------------------------------------------------------------
 
-$REPO                  = "terchris/devcontainer-toolbox"
+$REPO                  = "helpers-no/devcontainer-toolbox"
 $DEVCONTAINER_JSON_URL = "https://raw.githubusercontent.com/$REPO/main/devcontainer-user-template.json"
 
 #------------------------------------------------------------------------------

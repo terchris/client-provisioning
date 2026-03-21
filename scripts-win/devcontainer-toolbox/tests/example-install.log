@@ -55,12 +55,12 @@ Transcript started, output file is D:\devcontainer-toolbox\tests\logs\test-resul
 [18:55:26] INFO  Backend state: STARTING (30/120 sec)
 [18:55:29] INFO  Backend state: DISABLED (33/120 sec)
 [18:55:29] OK    Backend is ready (state: DISABLED)
-[18:55:29] INFO  Pulling Docker image: ghcr.io/terchris/devcontainer-toolbox:latest
-latest: Pulling from terchris/devcontainer-toolbox
+[18:55:29] INFO  Pulling Docker image: ghcr.io/helpers-no/devcontainer-toolbox:latest
+latest: Pulling from helpers-no/devcontainer-toolbox
 Digest: sha256:0e11d585c0b284435653dd3cd00c04e9f7387a7260753789d8e54b27a6382618
-Status: Image is up to date for ghcr.io/terchris/devcontainer-toolbox:latest
-ghcr.io/terchris/devcontainer-toolbox:latest
-[18:55:31] OK    Docker image pulled: ghcr.io/terchris/devcontainer-toolbox:latest
+Status: Image is up to date for ghcr.io/helpers-no/devcontainer-toolbox:latest
+ghcr.io/helpers-no/devcontainer-toolbox:latest
+[18:55:31] OK    Docker image pulled: ghcr.io/helpers-no/devcontainer-toolbox:latest
 [18:55:31] INFO  Installing devcontainer-init to C:\Program Files\devcontainer-toolbox...
 [18:55:31] OK    Installed devcontainer-init.ps1 and devcontainer-init.cmd to C:\Program Files\devcontainer-toolbox
 [18:55:31] INFO  Adding C:\Program Files\devcontainer-toolbox to system PATH...
@@ -72,7 +72,7 @@ Shutting down.
 [18:55:42] OK    Rancher Desktop stopped
 
 [18:55:42] OK    Devcontainer Toolbox Installer completed
-[18:55:42] OK      Image: ghcr.io/terchris/devcontainer-toolbox:latest
+[18:55:42] OK      Image: ghcr.io/helpers-no/devcontainer-toolbox:latest
 [18:55:42] OK      Tool:  C:\Program Files\devcontainer-toolbox\devcontainer-init.cmd
 [18:55:42] INFO  Users can now run 'devcontainer-init' from any new terminal
 

@@ -28,7 +28,7 @@ SCRIPT_CATEGORY="DEVOPS"
 # CONFIGURATION
 #------------------------------------------------------------------------------
 
-IMAGE_NAME="ghcr.io/terchris/devcontainer-toolbox:latest"
+IMAGE_NAME="ghcr.io/helpers-no/devcontainer-toolbox:latest"
 
 #------------------------------------------------------------------------------
 # LOGGING

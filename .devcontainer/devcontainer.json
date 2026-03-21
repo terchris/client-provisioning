@@ -1,6 +1,6 @@
 {
     // DevContainer Toolbox — image mode template for USER PROJECTS
-    // Docs: https://github.com/terchris/devcontainer-toolbox
+    // Docs: https://github.com/helpers-no/devcontainer-toolbox
     //
     // This file is the SINGLE SOURCE OF TRUTH for user project configuration.
     // All install scripts and deployment tools download this file.
@@ -8,7 +8,7 @@
     //
     // overrideCommand: false is REQUIRED so VS Code doesn't bypass the ENTRYPOINT.
     // The entrypoint handles all startup — no lifecycle hooks needed.
-    "image": "ghcr.io/terchris/devcontainer-toolbox:latest",
+    "image": "ghcr.io/helpers-no/devcontainer-toolbox:latest",
     "overrideCommand": false,
 
     // VPN capabilities

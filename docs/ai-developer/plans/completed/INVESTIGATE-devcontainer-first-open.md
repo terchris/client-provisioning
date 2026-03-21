@@ -217,7 +217,7 @@ Existing repos already have `.devcontainer/devcontainer.json` but no `.vscode/ex
 
 The fix: the **devcontainer-toolbox itself** should create `.vscode/extensions.json` in the workspace if it doesn't already exist. This happens inside the container on startup (the entrypoint script). On the next container rebuild, the file appears in the workspace. If the user later opens the same repo on a fresh machine without the extension, the recommendation prompt appears.
 
-**This is a change to the devcontainer-toolbox project** (upstream at `github.com/terchris/devcontainer-toolbox`), not to this repo. File an issue or PR there.
+**This is a change to the devcontainer-toolbox project** (upstream at `github.com/helpers-no/devcontainer-toolbox`), not to this repo. File an issue or PR there.
 
 ### Immediate fix for this repo
 

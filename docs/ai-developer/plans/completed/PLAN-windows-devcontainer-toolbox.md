@@ -64,7 +64,7 @@ Create the core scripts. Reuse the launch/wait/shutdown pattern from `scripts-wi
   - Verify Rancher Desktop is installed (check known install paths, same as `rancher-desktop/install.ps1`)
   - Launch Rancher Desktop (same `Start-Process` pattern)
   - Poll `rdctl api /v1/backend_state` until STARTED (same `Wait-ForBackendReady` pattern, timeout 120s)
-  - Run `docker pull ghcr.io/terchris/devcontainer-toolbox:latest`
+  - Run `docker pull ghcr.io/helpers-no/devcontainer-toolbox:latest`
   - Copy `devcontainer-init.ps1` and `devcontainer-init.cmd` to `C:\Program Files\devcontainer-toolbox\`
   - Add `C:\Program Files\devcontainer-toolbox\` to system PATH via `[Environment]::SetEnvironmentVariable`
   - Shut down Rancher Desktop via `rdctl shutdown` (same `Stop-RancherDesktop` pattern)
