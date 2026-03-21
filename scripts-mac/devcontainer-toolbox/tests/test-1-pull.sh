@@ -80,7 +80,7 @@ done
 TESTS_DIR="$(cd "$(dirname "$0")" && pwd)"
 source "${TESTS_DIR}/test-helpers.sh"
 
-IMAGE_NAME="ghcr.io/terchris/devcontainer-toolbox:latest"
+IMAGE_NAME="ghcr.io/helpers-no/devcontainer-toolbox:latest"
 
 #------------------------------------------------------------------------------
 # MAIN

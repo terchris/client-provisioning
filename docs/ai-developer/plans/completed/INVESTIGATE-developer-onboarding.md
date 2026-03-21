@@ -224,16 +224,16 @@ Toolbox issues were filed and resolved:
 
 | Local issue file | GitHub issue | Status |
 |---|---|---|
-| [ISSUE-azure-devops-cli.md](../../devcontainer-toolbox-issues/ISSUE-azure-devops-cli.md) | [#42](https://github.com/terchris/devcontainer-toolbox/issues/42) — Need lightweight Azure DevOps tool | **Closed** |
-| [ISSUE-config-azure-devops.md](../../devcontainer-toolbox-issues/ISSUE-config-azure-devops.md) | [#44](https://github.com/terchris/devcontainer-toolbox/issues/44) — Need config-azure-devops.sh addition | **Closed** |
-| [ISSUE-machine-readable-tool-inventory.md](../../devcontainer-toolbox-issues/ISSUE-machine-readable-tool-inventory.md) | [#43](https://github.com/terchris/devcontainer-toolbox/issues/43) — Ship machine-readable tool inventory | **Closed** |
-| [ISSUE-persist-claude-credentials.md](../../devcontainer-toolbox-issues/ISSUE-persist-claude-credentials.md) | [#46](https://github.com/terchris/devcontainer-toolbox/issues/46) — Persist Claude Code credentials | **Open** |
+| [ISSUE-azure-devops-cli.md](../../devcontainer-toolbox-issues/ISSUE-azure-devops-cli.md) | [#42](https://github.com/helpers-no/devcontainer-toolbox/issues/42) — Need lightweight Azure DevOps tool | **Closed** |
+| [ISSUE-config-azure-devops.md](../../devcontainer-toolbox-issues/ISSUE-config-azure-devops.md) | [#44](https://github.com/helpers-no/devcontainer-toolbox/issues/44) — Need config-azure-devops.sh addition | **Closed** |
+| [ISSUE-machine-readable-tool-inventory.md](../../devcontainer-toolbox-issues/ISSUE-machine-readable-tool-inventory.md) | [#43](https://github.com/helpers-no/devcontainer-toolbox/issues/43) — Ship machine-readable tool inventory | **Closed** |
+| [ISSUE-persist-claude-credentials.md](../../devcontainer-toolbox-issues/ISSUE-persist-claude-credentials.md) | [#46](https://github.com/helpers-no/devcontainer-toolbox/issues/46) — Persist Claude Code credentials | **Open** |
 
 ---
 
 ## Next Steps
 
-- [x] Submit toolbox issue for `config-azure-devops.sh` — resolved in toolbox ([#44](https://github.com/terchris/devcontainer-toolbox/issues/44))
+- [x] Submit toolbox issue for `config-azure-devops.sh` — resolved in toolbox ([#44](https://github.com/helpers-no/devcontainer-toolbox/issues/44))
 - [ ] Research VS Code deployment via Jamf (.pkg availability)
 - [ ] Test the bootstrap flow: `devcontainer-init` → open in VS Code → clone from inside
 - [ ] Create training repo in AId project

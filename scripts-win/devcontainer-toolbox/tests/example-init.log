@@ -35,7 +35,7 @@ Transcript started, output file is D:\devcontainer-toolbox\tests\logs\test-resul
 [18:55:51] INFO  Starting: Devcontainer Initialization Ver: 0.1.0
 [18:55:51] INFO  Using target directory: C:\Users\terchris\AppData\Local\Temp\devcontainer-init-test-0d12cbe4
 [18:55:52] INFO  Downloading devcontainer.json...
-[18:55:52] INFO    URL: https://raw.githubusercontent.com/terchris/devcontainer-toolbox/main/.devcontainer/devcontainer.json
+[18:55:52] INFO    URL: https://raw.githubusercontent.com/helpers-no/devcontainer-toolbox/main/.devcontainer/devcontainer.json
 [18:55:52] OK    Created .devcontainer/devcontainer.json (3179 bytes)
 [18:55:52] OK    devcontainer configuration created!
 [18:55:52] INFO  Next steps:

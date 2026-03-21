@@ -153,7 +153,7 @@ To auto-enable a new tool, add its identifier to this file. The `dev-setup` menu
 
 ## Reporting Bugs and Requesting New Tools
 
-The devcontainer-toolbox is open source at [github.com/terchris/devcontainer-toolbox](https://github.com/terchris/devcontainer-toolbox). Bug reports and feature requests are welcome.
+The devcontainer-toolbox is open source at [github.com/helpers-no/devcontainer-toolbox](https://github.com/helpers-no/devcontainer-toolbox). Bug reports and feature requests are welcome.
 
 When you find a bug or need a new tool:
 
@@ -161,7 +161,7 @@ When you find a bug or need a new tool:
 2. Submit it to GitHub using `gh`:
 
 ```bash
-gh issue create --repo terchris/devcontainer-toolbox \
+gh issue create --repo helpers-no/devcontainer-toolbox \
   --title "Short description" \
   --body-file docs/ai-developer/devcontainer-toolbox-issues/ISSUE-my-issue.md
 ```

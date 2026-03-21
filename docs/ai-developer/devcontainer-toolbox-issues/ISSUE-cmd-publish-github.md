@@ -455,9 +455,9 @@ show_help() {
     echo "  --yes                                  Skip confirmation prompt"
     echo ""
     echo "Examples:"
-    echo "  $SELF_SCRIPT --diff https://github.com/terchris/client-provisioning.git"
-    echo "  $SELF_SCRIPT --sync https://github.com/terchris/client-provisioning.git"
-    echo "  $SELF_SCRIPT --sync --yes https://github.com/terchris/client-provisioning.git"
+    echo "  $SELF_SCRIPT --diff https://github.com/helpers-no/client-provisioning.git"
+    echo "  $SELF_SCRIPT --sync https://github.com/helpers-no/client-provisioning.git"
+    echo "  $SELF_SCRIPT --sync --yes https://github.com/helpers-no/client-provisioning.git"
     echo ""
     echo "How it works:"
     echo "  First run:  exports all tracked files, creates fresh repo, pushes"
@@ -528,4 +528,4 @@ parse_args "$@"
 
 ## Discovered
 
-Built and tested in the `client-provisioning` project to publish a private Azure DevOps repo to a public GitHub mirror. Used successfully to publish https://github.com/terchris/client-provisioning.
+Built and tested in the `client-provisioning` project to publish a private Azure DevOps repo to a public GitHub mirror. Used successfully to publish https://github.com/helpers-no/client-provisioning.

@@ -56,7 +56,7 @@ scripts-mac/devcontainer-toolbox/
 ```
 
 **Key behaviors:**
-- `devcontainer-pull.sh` -- checks Rancher Desktop is running (docker daemon available), pulls `ghcr.io/terchris/devcontainer-toolbox:latest`
+- `devcontainer-pull.sh` -- checks Rancher Desktop is running (docker daemon available), pulls `ghcr.io/helpers-no/devcontainer-toolbox:latest`
 - `devcontainer-init-install.sh` -- copies `devcontainer-init.sh` to `/usr/local/bin/devcontainer-init`, needs root
 - `devcontainer-init.sh` -- creates `.devcontainer/` in target dir, downloads `devcontainer.json` from GitHub, backs up existing config, supports `-y` for non-interactive mode
 
@@ -89,7 +89,7 @@ Standard Intune package with `install.ps1` as entry point. The `devcontainer-ini
 1. Verifies Rancher Desktop is installed (check install paths)
 2. Launches Rancher Desktop (same approach as `rancher-desktop/install.ps1`)
 3. Polls `rdctl api /v1/backend_state` until STARTED (same wait pattern)
-4. Runs `docker pull ghcr.io/terchris/devcontainer-toolbox:latest`
+4. Runs `docker pull ghcr.io/helpers-no/devcontainer-toolbox:latest`
 5. Installs `devcontainer-init.ps1` to `C:\Program Files\devcontainer-toolbox\`
 6. Creates `devcontainer-init.cmd` wrapper (so users type `devcontainer-init` without `.ps1`)
 7. Adds `C:\Program Files\devcontainer-toolbox\` to the system PATH

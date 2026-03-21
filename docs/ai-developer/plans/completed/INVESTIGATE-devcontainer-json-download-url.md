@@ -24,7 +24,7 @@
 Both `devcontainer-init.sh` and `devcontainer-init.ps1` download `devcontainer.json` from:
 
 ```
-https://raw.githubusercontent.com/terchris/devcontainer-toolbox/main/.devcontainer/devcontainer.json
+https://raw.githubusercontent.com/helpers-no/devcontainer-toolbox/main/.devcontainer/devcontainer.json
 ```
 
 **This is the wrong file.** That URL points to the **build-mode** `devcontainer.json` which contains:
@@ -47,7 +47,7 @@ This file is for developing the toolbox itself. It requires the full `.devcontai
 The **image-mode** `devcontainer.json` which contains:
 
 ```json
-"image": "ghcr.io/terchris/devcontainer-toolbox:latest"
+"image": "ghcr.io/helpers-no/devcontainer-toolbox:latest"
 ```
 
 This is a self-contained file that pulls the pre-built Docker image. No Dockerfile or scripts needed.
@@ -92,7 +92,7 @@ The toolbox repo currently has no standalone image-mode `devcontainer.json` at a
 A standalone image-mode `devcontainer.json` needs to be published at a stable URL. Decided location:
 
 ```
-https://raw.githubusercontent.com/terchris/devcontainer-toolbox/main/devcontainer-user-template.json
+https://raw.githubusercontent.com/helpers-no/devcontainer-toolbox/main/devcontainer-user-template.json
 ```
 
 The file is named `devcontainer-user-template.json` (at the repo root) to make it immediately visible and clearly distinguish it from the build-mode `.devcontainer/devcontainer.json`.
@@ -136,7 +136,7 @@ If you need to deploy NOW before the toolbox repo publishes the image-mode file,
 
 ```json
 {
-    "image": "ghcr.io/terchris/devcontainer-toolbox:latest",
+    "image": "ghcr.io/helpers-no/devcontainer-toolbox:latest",
     "overrideCommand": false,
     "runArgs": [
         "--cap-add=NET_ADMIN",

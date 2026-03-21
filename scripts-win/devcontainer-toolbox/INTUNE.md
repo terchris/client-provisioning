@@ -71,7 +71,7 @@ The devcontainer-toolbox needs Docker (provided by Rancher Desktop) to pull the 
 
 ## Notes
 
-- The install script launches Rancher Desktop, waits for the Docker backend, pulls `ghcr.io/terchris/devcontainer-toolbox:latest`, copies the init tool to `C:\Program Files\devcontainer-toolbox\`, adds it to the system PATH, then shuts down Rancher Desktop. If any step fails, exit 1 triggers Intune retry.
+- The install script launches Rancher Desktop, waits for the Docker backend, pulls `ghcr.io/helpers-no/devcontainer-toolbox:latest`, copies the init tool to `C:\Program Files\devcontainer-toolbox\`, adds it to the system PATH, then shuts down Rancher Desktop. If any step fails, exit 1 triggers Intune retry.
 - The `devcontainer-init` command does NOT require Docker -- it only downloads a config file from GitHub. Docker is only needed during the install step (to pull the image).
 - The uninstall script removes the install directory and PATH entry. It attempts to remove the Docker image if Docker is running; otherwise it skips image removal (best effort).
 - PATH changes only take effect in new terminal sessions. Users who had a terminal open during install need to open a new one.

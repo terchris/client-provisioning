@@ -38,7 +38,7 @@ $SCRIPT_CATEGORY    = "DEPLOY"
 #------------------------------------------------------------------------------
 
 $INSTALL_DIR        = "C:\Program Files\devcontainer-toolbox"
-$CONTAINER_IMAGE    = "ghcr.io/terchris/devcontainer-toolbox:latest"
+$CONTAINER_IMAGE    = "ghcr.io/helpers-no/devcontainer-toolbox:latest"
 
 $RANCHER_EXE           = "Rancher Desktop.exe"
 $RANCHER_PROCESS       = "Rancher Desktop"

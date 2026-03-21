@@ -33,7 +33,7 @@ Transcript started, output file is D:\devcontainer-toolbox\tests\logs\test-resul
 [18:54:13] OK    Removed C:\Program Files\devcontainer-toolbox from system PATH
 [18:54:13] INFO  Docker is not running -- skipping image removal
 [18:54:13] INFO  To remove the image manually, start Rancher Desktop and run:
-[18:54:13] INFO    docker rmi ghcr.io/terchris/devcontainer-toolbox:latest
+[18:54:13] INFO    docker rmi ghcr.io/helpers-no/devcontainer-toolbox:latest
 
 [18:54:13] OK    Devcontainer Toolbox Uninstaller completed -- devcontainer-toolbox removed
 
